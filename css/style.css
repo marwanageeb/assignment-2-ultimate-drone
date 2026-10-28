@@ -1,0 +1,1130 @@
+/* general style */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Exo", sans-serif;
+    color: #333;
+}
+
+span,
+img {
+    display: inline-block;
+}
+
+li {
+    list-style: none;
+    color: #333;
+
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #333;
+
+}
+
+.font-bold {
+    font-weight: 600;
+}
+
+.violet {
+    color: #8b5cf6;
+}
+
+/* element need clear for all float element*/
+.clear-fix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* =============Header =================*/
+/* ============Start Navbar Styling ==============*/
+
+.main-header {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    background-color: #f5f3ff;
+    border-bottom: 1px solid #ddd6fe;
+    z-index: 999;
+
+}
+
+/* -------Nav Container------------- */
+
+.nav-container {
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
+}
+
+/* Logo Section */
+
+.logo {
+    float: left;
+}
+
+.logo-icon {
+    float: left;
+    width: 40px;
+    height: 40px;
+    background-color: #8b5cf6;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    margin-right: 10px;
+}
+
+.logo-text {
+    float: left;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 40px;
+}
+
+/* Nav Links */
+
+.nav-links {
+    float: right;
+}
+
+.nav-links ul {
+    list-style: none;
+}
+
+.nav-links ul li {
+    float: left;
+    margin-left: 30px;
+}
+
+.nav-links ul li a {
+    color: #111827;
+    font-weight: 500;
+    position: relative;
+}
+
+/* Hover effect (underline animation) */
+
+.nav-links ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #7c3aed;
+    left: 0;
+    bottom: -4px;
+    transition: 0.3s;
+}
+
+.nav-links ul li a:hover::after {
+    width: 100%;
+
+}
+
+.nav-links ul li a:hover {
+    color: #7c3aed;
+}
+
+/* Active */
+
+.nav-links ul li a.active {
+    color: #7c3aed;
+
+}
+
+.nav-links ul li a.active::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #7c3aed;
+    left: 0;
+    bottom: -4px;
+    transition: 0.3s;
+}
+
+/*============= End Navbar Styling===================== */
+
+/*============= Start Home Section Styling====================*/
+
+.home {
+    /* background-color: aqua; */
+    margin-block: 80px;
+    width: 100%;
+}
+
+.home-container {
+    /* background-color: rgb(96, 65, 235); */
+    padding-top: 40px;
+    width: 90%;
+    margin: auto;
+}
+
+.home-photo {
+    /* background-color: rgb(95, 23, 77); */
+    width: 48%;
+    float: left;
+    position: relative;
+    margin: auto;
+    margin-right: 3%;
+    border: 1px solid #e0e3e7;
+    border-radius: 5%;
+}
+
+.home-photo img {
+    width: 100%;
+    border-radius: 3rem;
+    padding: 25px;
+}
+
+.abolute-home {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    background-color: #7c3aed;
+    padding-inline: 15px;
+    border-radius: 10px;
+}
+
+.home-content {
+    width: 48%;
+    float: left;
+}
+
+.home-title {
+    margin-bottom: 25px;
+}
+
+.home-title span {
+    background-color: #a78bfa;
+    color: #ffffff;
+    padding: 4px 14px;
+    border-radius: 9999px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.home-description {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+
+.price {
+    margin-bottom: 32px;
+}
+
+.price span {
+    vertical-align: middle;
+}
+
+.price .price-current {
+    font-weight: 700;
+    font-size: 2.25rem;
+    margin-right: 16px;
+
+}
+
+.price .price-old {
+    font-size: 24px;
+    margin-right: 16px;
+    text-decoration: line-through;
+
+}
+
+.price .price-save {
+    background-color: #ffe2e2;
+    color: red;
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 4px 12px;
+    font-size: 14px;
+}
+
+.price-offer {
+    color: #333;
+    margin-bottom: 24px;
+}
+
+.home-btn {
+    width: 100%;
+    text-align: center;
+}
+
+.home-btn button {
+    width: 100%;
+    padding: 16px 32px;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.home-btn button:hover {
+    transform: scale(1.03);
+
+}
+
+.home-btn :first-child {
+    border: none;
+    background-color: #8b5cf6;
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+.home-btn :first-child i {
+    background-color: #8b5cf6;
+    color: #fff;
+    border: none;
+
+}
+
+.home-btn :last-child {
+    background-color: transparent;
+    color: #000;
+    border: 2px solid #d1d5db;
+
+}
+
+.home-btn :last-child i {
+    border: none
+}
+
+
+/* End Home Section Styling */
+
+/*>>>>>>>>>>>>>Start How We Compare Section Styling>>>>>>>>>>>>>. */
+/* Section Layout  */
+
+.Compare-section {
+    padding: 80px 0;
+    background: #f5f3ff;
+}
+
+/* section container */
+
+.Compare-container {
+    width: 90%;
+    margin: auto;
+}
+
+/*>>>>>>>>>>>>HEADING REBEAT ALL OVER SITE>>>>>>>>>>>>> */
+/* >>>>>>>>>>> Start Title styling (div contain  H2 + p ) for all element  in the site>>>>>>>>>>> */
+.text-center {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.heading {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.sub-text {
+    font-size: 20px;
+}
+
+/* >>>>>>>>>>> End Title styling (div contain  H2 + p ) for all element  in the site>>>>>>>>>>> */
+
+/* Card */
+.card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid #ddd;
+    overflow-x: auto;
+}
+
+/* Table and general styling */
+table {
+    width: 100%;
+    min-width: 800px;
+    border-collapse: collapse;
+}
+
+.bg-highlight {
+    background: #ede9fe;
+    border-bottom: 1px solid #d6dae3;
+
+}
+
+/*>>>>>>start th styling >>>>>>>>>>*/
+th {
+    padding: 18px;
+    border-bottom: 2px solid #ddd;
+    font-weight: 700;
+}
+
+th:first-child,
+td:first-child {
+    text-align: left;
+}
+
+table td:not(:first-child),
+table th:not(:first-child) {
+    text-align: center;
+}
+
+.rounded-top {
+    border-radius: 10px 10px 0 0;
+}
+
+.violet-light {
+    color: #8e51ff;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 8px;
+}
+
+.top-header {
+    color: #33335a;
+    font-size: 18px;
+    margin-bottom: 8px;
+
+}
+
+.bottom-header {
+    color: #6a7282;
+}
+
+/*>>>>>>End th styling >>>>>>>>>>*/
+
+/*>>>>>>>>>>>start td styling>>>>>>>>>> */
+
+td {
+    padding: 16px;
+    color: #33335a;
+    border-bottom: 1px solid #eee;
+}
+
+td i {
+    margin-right: 8px;
+}
+
+/*>>>>>>>>>>>End td styling>>>>>>>>>> */
+
+/* Badge  */
+.badge {
+    background: #8b5cf6;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    display: inline-block;
+}
+
+/* table icon color */
+.icon-cyan {
+    color: #06b6d4;
+}
+
+.icon-teal {
+    color: #14b8a6;
+}
+
+.icon-bright-green {
+    color: #00c950;
+}
+
+.icon-bright-orange {
+    color: #ff6900;
+}
+
+.icon-red {
+    color: #fb2c36;
+}
+
+.icon-sky {
+    color: #74c0fc;
+}
+
+.icon-indigo {
+    color: #615fff;
+}
+
+.icon-orange-vivid {
+    color: #f7682b;
+}
+
+.icon-golden-yellow {
+    color: #f0b100;
+}
+
+.icon-white {
+    color: #ffffff;
+}
+
+.dark-orange {
+    color: #ea580c;
+}
+
+/* Cells */
+.cell {
+    padding: 24px 16px;
+    border-bottom: 1px solid #eee;
+}
+
+.center {
+    text-align: center;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* Highlight column */
+.rounded-bottom {
+    background-color: #ede9fe;
+    border-radius: 0 0 10px 10px;
+}
+
+
+/* tabel footer styling */
+.rating-box {
+    text-align: center;
+}
+
+/* Stars */
+.stars {
+    margin-bottom: 6px;
+}
+
+.stars i {
+    color: #facc15;
+    margin: 0 2px;
+    font-size: 16px;
+}
+
+/* Gray star */
+.stars .gray {
+    color: #d1d5db;
+}
+
+/* Score */
+.score {
+    font-weight: 600;
+}
+
+.score.strong {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* Price */
+.price {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/*Styling Winner Div */
+.winner-box {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.winner {
+    display: inline-block;
+    background: #fff;
+    padding: 15px 25px;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+}
+
+.icon {
+    float: left;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.icon i {
+    color: #22c55e;
+    font-size: 24px;
+    margin-right: 12px
+}
+
+.winner-text {
+    float: left;
+    text-align: left;
+}
+
+.winner-title {
+    font-weight: bold;
+    color: green;
+    margin: 0;
+}
+
+.winner-sub {
+    font-size: 14px;
+    color: green;
+    margin: 0;
+}
+
+/*>>>>>>>>>>>>>End How We Compare Section Styling>>>>>>>>>>>>> */
+
+/* Start Cusromers-say Section Styling*/
+.cusromers-say {
+    padding: 80px 0;
+}
+
+.cusromers-container {
+    width: 90%;
+    margin-inline: auto;
+    padding: 0 24px;
+}
+
+.customer-rate {
+    position: relative;
+
+}
+
+/* first sec */
+.rate-left {
+    width: 30%;
+    margin-right: 3%;
+    float: left;
+    position: sticky;
+    top: 70px;
+    border: 2px solid #e5e7eb;
+    border-radius: 15px;
+}
+
+.rate-right {
+    float: left;
+    width: 65%;
+}
+
+.rating-summary {
+    text-align: center;
+    padding: 32px;
+}
+
+.rating-summary-value {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.rating-summary-stars {
+    margin: 8px 0;
+}
+
+.rating-summary-stars i {
+    color: #facc15;
+    font-size: 16px;
+    margin: 0 2px;
+}
+
+.rating-summary-text {
+    font-size: 16px;
+    color: #333;
+}
+
+/* second sec */
+
+.rating {
+    width: 100%;
+    margin-block: 20px;
+}
+
+.rating-row {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.rating-label,
+.rating-percent,
+.rating-bar {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.rating-label {
+    padding-left: 15px;
+    width: 30px;
+}
+
+.rating-percent {
+    width: 40px;
+    text-align: right;
+}
+
+.rating-bar {
+    width: 180px;
+    height: 8px;
+    background-color: #eee;
+    border-radius: 20px;
+    margin: 0 10px;
+    overflow: hidden;
+}
+
+.rating-fill {
+    height: 100%;
+    background-color: #f0b100;
+    border-radius: 20px;
+    transition: width 0.5s ease;
+}
+
+.w-78 {
+    width: 78%;
+}
+
+.w-15 {
+    width: 15%;
+}
+
+.w-5 {
+    width: 5%;
+}
+
+.w-2 {
+    width: 1.5%;
+}
+
+.w-1 {
+    width: 0.5%;
+}
+
+
+.rating::after {
+    content: "";
+    display: block;
+    width: 90%;
+    height: 1px;
+    background-color: #d1d5db;
+    margin: 30px auto;
+}
+
+.stats {
+    margin-block: 30px;
+    width: 100%;
+
+}
+
+.stats-container {
+    width: 80%;
+    margin: auto;
+}
+
+.stats-item {
+    width: 48%;
+    text-align: center;
+
+}
+
+.stats-item-left {
+    float: left;
+    margin-right: 4px;
+}
+
+.stats-item-right {
+    float: right;
+}
+
+.stats-value {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.stats-label {
+    font-size: 14px;
+    color: #777;
+    margin-top: 5px;
+}
+
+/* Right side Section */
+
+.reviews {
+    margin-left: 15px;
+    margin: 15px auto;
+
+}
+
+/* every row review */
+.review {
+    padding: 32px;
+    margin-bottom: 24px;
+    border-radius: 20px;
+    background-color: #FFF;
+    border-radius: 1rem;
+    border: 2px solid #e5e7eb;
+}
+
+.review-header {
+    position: relative;
+}
+
+.review-avatar {
+    float: left;
+    margin-right: 10px;
+}
+
+.review-avatar img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.review-info {
+    margin-bottom: 24px;
+    float: left;
+}
+.review-name {
+    margin: 0;
+    font-size: 16px;
+}
+
+.review-job {
+    margin: 0;
+
+    font-size: 13px;
+    color: #777;
+
+}
+
+.review-rating i {
+    color: #fdc700;
+    font-size: 12px;
+}
+
+.review-score {
+    margin-left: 5px;
+    font-size: 13px;
+}
+
+/* meta div need position */
+.review-meta {
+    width: 150px;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    font-size: 14px;
+}
+
+.review-meta span {
+    margin-right: 10px;
+    padding-left: 20%;
+}
+
+.review-meta span:first-child {
+    background-color: #ede9fe;
+    color: #5d0ec0;
+    border-radius: 10px;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 600;
+
+}
+
+
+/* Start Review Pargraph Styling */
+.review-text {
+    line-height: 1.6;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 16px;
+}
+
+/* End Review Pargraph Styling */
+
+/* Start Section Button */
+.reviews-btn {
+    padding-top: 32px;
+}
+
+.reviews-btn button {
+    background-color: #8b5cf6; 
+    color: #fff;               
+    cursor: pointer;           
+    border: 2px solid #8b5cf6; 
+    padding: 12px 32px;       
+    border-radius: 9999px;      
+    font-weight: 600;           
+    display: block;
+    margin-inline: auto;
+    transition: color 0.2s, background-color 0.2s, border-color 0.2s; 
+
+}
+
+.reviews-btn button:hover {
+    background-color: #fff;
+    color: #8e51ff;
+    border-color: #7c3aed;
+
+}
+
+/* End Section Button */
+/* End Cusromers-say Section Styling*/
+
+/*>>>>>>>>>>>>>Start Product Section Styling>>>>>>>>>>> */
+.product {
+    width: 100%;
+    background-color: #f7f5ff;
+    padding-block: 80px;
+
+}
+
+.product-container {
+    width: 90%;
+    margin: auto;
+}
+
+.row-product {
+    margin-bottom: 24px;
+}
+
+.product-item {
+    width: 24%;
+    padding: 24px;
+    margin-right: 1.333%;
+    float: left;
+    border: 2px solid #e5e7eb;
+    border-radius: 16px;
+    min-height: 460px;
+}
+
+.product-item:nth-child(4n) {
+    margin-right: 0;
+}
+
+.product-image {
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.product-image:hover {
+    transform: scale(1.05);
+}
+
+.product-image img {
+    width: 100%;
+    border-radius: 16px;
+
+}
+
+.product-image span {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.product1-color {
+    background-color: #14b8a6;
+
+}
+
+.product2-color {
+    background-color: #00c950;
+
+}
+
+.product3-color {
+    background-color: #00b8db;
+
+}
+
+.product4-color {
+    background-color: #ff6900;
+
+}
+
+.product-detail h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.product-detail p {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.product-btn span {
+    font-size: 24px;
+    font-weight: 700;
+    float: left;
+}
+
+.product-btn button {
+    padding: 8px 16px;
+    border-radius: 9999px;
+    border: none;
+    outline: none;
+    background-color: #8b5cf6;
+    color: #fff;
+    cursor: pointer;
+    float: right;
+    font-weight: 600;
+
+
+}
+
+.all-item {
+    text-align: center;
+    margin-top: 48px;
+}
+
+.all-item button {
+    padding: 16px 32px;
+    background-color: transparent;
+    color: #8b5cf6;
+    border-radius: 9999px;
+    font-weight: 600;
+    border: 2px solid #7c3aed;
+    transition: all 0.2s ease;
+}
+
+.all-item button:hover {
+    background-color: #8b5cf6;
+    color: #fff;
+}
+
+/*>>>>>>>>>>>>>End Product Section Styling>>>>>>>>>>> */
+
+/* >>>>>>>>>>>Start Footer Styling<<<<<<<<<<<<<<<<<<<*/
+footer {
+    /* margin-top: 48px; */
+    width: 100%;
+    background-color: #111827;
+    color: #fff;
+    padding-top: 64px;
+    padding-bottom: 32px;
+}
+
+.footer-container {
+    width: 90%;
+    margin: auto;
+}
+
+/* footer first row styling  */
+.row1,
+.row2 {
+    width: 23%;
+    float: left;
+    margin-right: 2%;
+    min-height: 230px;
+
+}
+
+.first-footer-row {
+    line-height: 1.6;
+    padding-bottom: 24px;
+}
+
+.social-icon :first-child {
+    padding-left: 0;
+}
+
+/* Social Icon  Styling */
+
+.custom-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #1f2937;
+    border-radius: 0.5rem;
+    text-align: center;
+    line-height: 2.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+/*Change background color When We Hover On Social Footer Icon */
+
+.custom-icon.bg-blue:hover {
+    background-color: #1877f2;
+}
+
+.custom-icon.bg-sky-blue:hover {
+    background-color: #1da1f2;
+}
+
+.custom-icon.bg-orange:hover {
+    background-color: #E4405F;
+}
+
+.custom-icon.bg-red:hover {
+    background-color: #ff0000;
+}
+
+/* footer second row styling  */
+
+.row2 h3 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.row2 ul {
+    padding: 0px;
+}
+
+.row2 ul li {
+    padding-block: 8px;
+    cursor: pointer;
+    color: #949caa;
+}
+
+/* footer copyright styling */
+
+.footer-copyright {
+    margin-top: 24px;
+    padding-top: 32px;
+    border-top: 1px solid #475468;
+}
+
+.footer-copyright p {
+    font-size: 14px;
+
+}
+
+.copy-left {
+    width: 70%;
+    float: left;
+}
+
+.copy-right {
+    width: 30%;
+    float: left;
+
+}
+
+.pay-method {
+    width: 30%;
+    margin-right: 0%;
+    float: left;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #fff;
+
+}
+
+.pay-method img {
+    height: 16px;
+}
+
+.pay-margin {
+    margin-right: 3%;
+}
+
+/* >>>>>>>>>>>End Footer Styling<<<<<<<<<<<<<<<<<<<*/
